@@ -1,0 +1,17 @@
+***************** Design Documentation APP ************************
+
+Routing:
+
+    Express Js is using for the routing in this app.
+
+Loading Files:  
+
+     To upload files to the project to being read by the buffer, Multer is being used to manage the incomming data.
+    Once, the data is turn in json by csvtojson library and then using the Files.js Schema, it gets only data structured in the model and then
+    is uploaded to the database.
+ 
+     FS library is being used to manage the files loaded.
+
+Storage
+       There is a folder called "uploads", where the csv files are loaded, after the data is saved, the files will be removed
+    By mongoose, the app stores all the data into the csv files loaded in MongoDB's database
