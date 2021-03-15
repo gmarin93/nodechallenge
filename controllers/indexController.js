@@ -45,7 +45,7 @@ exports.loadFile = async (req, res, next) => {
             fs.unlinkSync(`${__dirname}/../uploads/${req.file.filename}`); //Delete the file loaded
             res.json({ data: arrayData });
           });
-      } else res.json({ msg: 'Something goes wrong, check the file extension' });
+      } else res.json({ msg: 'Something goes wrong, check the file extension or '+error  });
     });
   } catch (error) {
     res.json({ msg: error });
